@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>3 | JUSTE GOUNGOUNGA</title>
+    <link>/publication-type/3/</link>
+      <atom:link href="/publication-type/3/index.xml" rel="self" type="application/rss+xml" />
+    <description>3</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>©2020 [Juste Goungounga](https://justegoungounga.netlify.app)</copyright><lastBuildDate>Tue, 07 Apr 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/img/portrait</url>
+      <title>3</title>
+      <link>/publication-type/3/</link>
+    </image>
+    
+    <item>
+      <title>Correcting for heterogeneity and non-comparability bias in multicenter clinical trials with a rescaled random-effect excess hazard model. / working paper</title>
+      <link>/publication/smmr2020/</link>
+      <pubDate>Tue, 07 Apr 2020 00:00:00 +0000</pubDate>
+      <guid>/publication/smmr2020/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

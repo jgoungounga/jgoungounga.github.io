@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>R Markdown | JUSTE GOUNGOUNGA</title>
+    <link>/tag/r-markdown/</link>
+      <atom:link href="/tag/r-markdown/index.xml" rel="self" type="application/rss+xml" />
+    <description>R Markdown</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>©2020 [Juste Goungounga](https://justegoungounga.netlify.app)</copyright><lastBuildDate>Thu, 05 Dec 2019 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/img/portrait</url>
+      <title>R Markdown</title>
+      <link>/tag/r-markdown/</link>
+    </image>
+    
+    <item>
+      <title>Leave one out</title>
+      <link>/talks/leave_one_out_test/</link>
+      <pubDate>Thu, 05 Dec 2019 00:00:00 +0000</pubDate>
+      <guid>/talks/leave_one_out_test/</guid>
+      <description>
+
+
+&lt;div id=&#34;packages-utiles&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Packages utiles&lt;/h2&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(&amp;quot;parallel&amp;quot;)
+library(&amp;quot;foreach&amp;quot;)
+library(&amp;quot;microbenchmark&amp;quot;)
+library(&amp;quot;tidyverse&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;contexte&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Contexte&lt;/h2&gt;
+&lt;p&gt;Supposons que l’on souhaite estimer la qualité de prédiction d’un modèle linéaire, ici un modèle linéaire pour la régression de la largeur d’une pétale sur une longueur sur le jeu de données iris de R.
+On peut utiliser la technique du &lt;code&gt;leave-one-out&lt;/code&gt; qui consiste à estimer l’erreur de généralisation : erreur observée pour des nouveaux individus qui viennent de la même distribution que les individus utilisés pour apprendre le modèle&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;principe-de-la-technique-du-leave-one-out&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Principe de la technique du &lt;code&gt;leave-one-out&lt;/code&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;estimation du modèle avec tous les individus sauf un,&lt;/li&gt;
+&lt;li&gt;prédiction pour cet individu&lt;/li&gt;
+&lt;li&gt;Calcul de l’erreur quadratique (Prediction sum of squares statistic) entre la prédiction et la valeur connue&lt;/li&gt;
+&lt;li&gt;répéttition de l’opération pour chacun des individus&lt;/li&gt;
+&lt;li&gt;sommation des erreurs obtenues&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;implémentation&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Implémentation&lt;/h2&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;leave_one_out &amp;lt;- function(i) {
+    model &amp;lt;- lm(Petal.Width ~ Petal.Length, data = iris[-i,])
+    pred.petal.width &amp;lt;- predict(model, data.frame(Petal.Length = iris[i, &amp;quot;Petal.Length&amp;quot;]))
+    return((pred.petal.width - iris[i, &amp;quot;Petal.Width&amp;quot;]) ^ 2)
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Appelons la fonction pour 100 individus du jeu de données &lt;code&gt;iris&lt;/code&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;microbenchmark::microbenchmark(
+    lapply(1:100, FUN = function(i)leave_one_out(i)),
+    times = 10
+)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Unit: milliseconds
+##                                               expr      min       lq     mean
+##  lapply(1:100, FUN = function(i) leave_one_out(i)) 173.9342 207.6442 248.0319
+##    median       uq      max neval
+##  241.1134 292.6029 316.7649    10&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Chaque appel de la fonction est indépendant.
+Proposons donc un test de la fonction par parrallèle.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;leave_one_out2 &amp;lt;- function(){
+    library(&amp;quot;parallel&amp;quot;)
+ output &amp;lt;- foreach(i = 1:100) %dopar% {
+      model &amp;lt;- lm(Petal.Width ~ Petal.Length, data = iris[-i,])
+    pred.petal.width &amp;lt;- predict(model, data.frame(Petal.Length = iris[i, &amp;quot;Petal.Length&amp;quot;]))
+    return((pred.petal.width - iris[i, &amp;quot;Petal.Width&amp;quot;]) ^ 2)
+ }
+   return(output)
+ }&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(parallel)
+cl &amp;lt;- detectCores()
+cl2 &amp;lt;- makeCluster(cl - 1) # a adapter suivant le nombre de coeurs de ta machine
+microbenchmark(lapply(1:100, FUN = function(i)leave_one_out(i)),leave_one_out2(), times = 10) %&amp;gt;% print(digits = 3)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Warning: executing %dopar% sequentially: no parallel backend registered&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Unit: milliseconds
+##                                               expr min  lq mean median  uq max
+##  lapply(1:100, FUN = function(i) leave_one_out(i)) 171 180  205    192 218 293
+##                                   leave_one_out2() 219 239  320    312 330 560
+##  neval cld
+##     10  a 
+##     10   b&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;stopCluster(cl2)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Prise en compte de l’hétérogénéité inter-centres et du biais de non-comparabilité avec un modèle à fragilité pour estimer la mortalité en excès dans les essais cliniques multicentrique</title>
+      <link>/talks/epiclin13-2019/</link>
+      <pubDate>Thu, 16 May 2019 11:00:00 +0000</pubDate>
+      <guid>/talks/epiclin13-2019/</guid>
+      <description>&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
+  &lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Internal seminar of the SESSTIM research unit on &#39;Estimation de la survie nette dans les essais cliniques - Intérêts des méthodes utilisées dans les études populationnelles&#39;.</title>
+      <link>/talks/seminaireinternesesstim2018/</link>
+      <pubDate>Fri, 08 Jun 2018 11:00:00 +0000</pubDate>
+      <guid>/talks/seminaireinternesesstim2018/</guid>
+      <description>&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
+  &lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Webinar on &#39;Estimation de la survie nette dans les essais cliniques - Intérêts des méthodes utilisées dans les études populationnelles&#39;.</title>
+      <link>/talks/webinar17juin2016/</link>
+      <pubDate>Fri, 17 Jun 2016 11:00:00 +0000</pubDate>
+      <guid>/talks/webinar17juin2016/</guid>
+      <description>&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
+  &lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
