@@ -64,9 +64,9 @@ On peut utiliser la technique du &lt;code&gt;leave-one-out&lt;/code&gt; qui cons
 )&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## Unit: milliseconds
 ##                                               expr      min       lq     mean
-##  lapply(1:100, FUN = function(i) leave_one_out(i)) 173.9342 207.6442 248.0319
+##  lapply(1:100, FUN = function(i) leave_one_out(i)) 163.4646 164.5139 188.2996
 ##    median       uq      max neval
-##  241.1134 292.6029 316.7649    10&lt;/code&gt;&lt;/pre&gt;
+##  169.5455 179.8084 290.8857    10&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Chaque appel de la fonction est indépendant.
 Proposons donc un test de la fonction par parrallèle.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;leave_one_out2 &amp;lt;- function(){
@@ -85,8 +85,8 @@ microbenchmark(lapply(1:100, FUN = function(i)leave_one_out(i)),leave_one_out2()
 &lt;pre&gt;&lt;code&gt;## Warning: executing %dopar% sequentially: no parallel backend registered&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## Unit: milliseconds
 ##                                               expr min  lq mean median  uq max
-##  lapply(1:100, FUN = function(i) leave_one_out(i)) 171 180  205    192 218 293
-##                                   leave_one_out2() 219 239  320    312 330 560
+##  lapply(1:100, FUN = function(i) leave_one_out(i)) 158 159  169    165 169 208
+##                                   leave_one_out2() 201 206  216    208 222 265
 ##  neval cld
 ##     10  a 
 ##     10   b&lt;/code&gt;&lt;/pre&gt;
