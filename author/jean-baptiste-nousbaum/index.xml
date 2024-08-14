@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Jean-Baptiste Nousbaum | JUSTE GOUNGOUNGA</title>
+    <link>https://jgoungounga.github.io/author/jean-baptiste-nousbaum/</link>
+      <atom:link href="https://jgoungounga.github.io/author/jean-baptiste-nousbaum/index.xml" rel="self" type="application/rss+xml" />
+    <description>Jean-Baptiste Nousbaum</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>©2024 Juste Goungounga</copyright><lastBuildDate>Mon, 03 Oct 2022 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://jgoungounga.github.io/img/portrait</url>
+      <title>Jean-Baptiste Nousbaum</title>
+      <link>https://jgoungounga.github.io/author/jean-baptiste-nousbaum/</link>
+    </image>
+    
+    <item>
+      <title>Incidence and Survival in Synchronous and Metachronous Liver Metastases From Colorectal Cancer</title>
+      <link>https://jgoungounga.github.io/publication/jama2022/</link>
+      <pubDate>Mon, 03 Oct 2022 00:00:00 +0000</pubDate>
+      <guid>https://jgoungounga.github.io/publication/jama2022/</guid>
+      <description>&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
+  &lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

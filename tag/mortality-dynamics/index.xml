@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mortality Dynamics | JUSTE GOUNGOUNGA</title>
+    <link>https://jgoungounga.github.io/tag/mortality-dynamics/</link>
+      <atom:link href="https://jgoungounga.github.io/tag/mortality-dynamics/index.xml" rel="self" type="application/rss+xml" />
+    <description>Mortality Dynamics</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>©2024 Juste Goungounga</copyright><lastBuildDate>Sat, 01 Oct 2022 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://jgoungounga.github.io/img/portrait</url>
+      <title>Mortality Dynamics</title>
+      <link>https://jgoungounga.github.io/tag/mortality-dynamics/</link>
+    </image>
+    
+    <item>
+      <title>Health status of prevalent cancer cases as measured by mortality dynamics (cancer vs. noncancer): Application to five major cancer sites</title>
+      <link>https://jgoungounga.github.io/publication/cancer2022/</link>
+      <pubDate>Sat, 01 Oct 2022 00:00:00 +0000</pubDate>
+      <guid>https://jgoungounga.github.io/publication/cancer2022/</guid>
+      <description>&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
+  &lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
