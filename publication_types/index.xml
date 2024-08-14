@@ -2,14 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Publication_types | JUSTE GOUNGOUNGA</title>
-    <link>/publication_types/</link>
-      <atom:link href="/publication_types/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://jgoungounga.github.io/publication_types/</link>
+      <atom:link href="https://jgoungounga.github.io/publication_types/index.xml" rel="self" type="application/rss+xml" />
     <description>Publication_types</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>©2020 [Juste Goungounga](https://justegoungounga.netlify.app)</copyright><lastBuildDate>Tue, 07 Apr 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>©2024 Juste Goungounga</copyright><lastBuildDate>Thu, 16 May 2019 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/img/portrait</url>
+      <url>https://jgoungounga.github.io/img/portrait</url>
       <title>Publication_types</title>
-      <link>/publication_types/</link>
+      <link>https://jgoungounga.github.io/publication_types/</link>
     </image>
     
   </channel>

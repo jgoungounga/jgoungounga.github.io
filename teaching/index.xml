@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>teaching | JUSTE GOUNGOUNGA</title>
-    <link>/teaching/</link>
-      <atom:link href="/teaching/index.xml" rel="self" type="application/rss+xml" />
-    <description>teaching</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>©2020 [Juste Goungounga](https://justegoungounga.netlify.app)</copyright><lastBuildDate>Sun, 09 Sep 2018 00:00:00 +0000</lastBuildDate>
+    <title>Teaching | JUSTE GOUNGOUNGA</title>
+    <link>https://jgoungounga.github.io/teaching/</link>
+      <atom:link href="https://jgoungounga.github.io/teaching/index.xml" rel="self" type="application/rss+xml" />
+    <description>Teaching</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>©2024 Juste Goungounga</copyright><lastBuildDate>Sun, 09 Sep 2018 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/img/portrait</url>
-      <title>teaching</title>
-      <link>/teaching/</link>
+      <url>https://jgoungounga.github.io/img/portrait</url>
+      <title>Teaching</title>
+      <link>https://jgoungounga.github.io/teaching/</link>
     </image>
     
   </channel>

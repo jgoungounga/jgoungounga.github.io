@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Master of public health | JUSTE GOUNGOUNGA</title>
-    <link>/teaching/example/</link>
-      <atom:link href="/teaching/example/index.xml" rel="self" type="application/rss+xml" />
-    <description>Master of public health</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>©2020 [Juste Goungounga](https://justegoungounga.netlify.app)</copyright><lastBuildDate>Sun, 09 Sep 2018 00:00:00 +0000</lastBuildDate>
+    <title>Master of public health (MQERS-SPSD-EISIS) | JUSTE GOUNGOUNGA</title>
+    <link>https://jgoungounga.github.io/teaching/example/</link>
+      <atom:link href="https://jgoungounga.github.io/teaching/example/index.xml" rel="self" type="application/rss+xml" />
+    <description>Master of public health (MQERS-SPSD-EISIS)</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>©2024 Juste Goungounga</copyright><lastBuildDate>Sun, 09 Sep 2018 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/img/portrait</url>
-      <title>Master of public health</title>
-      <link>/teaching/example/</link>
+      <url>https://jgoungounga.github.io/img/portrait</url>
+      <title>Master of public health (MQERS-SPSD-EISIS)</title>
+      <link>https://jgoungounga.github.io/teaching/example/</link>
     </image>
     
   </channel>

@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>R | JUSTE GOUNGOUNGA</title>
-    <link>/category/r/</link>
-      <atom:link href="/category/r/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://jgoungounga.github.io/category/r/</link>
+      <atom:link href="https://jgoungounga.github.io/category/r/index.xml" rel="self" type="application/rss+xml" />
     <description>R</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>©2020 [Juste Goungounga](https://justegoungounga.netlify.app)</copyright><lastBuildDate>Thu, 05 Dec 2019 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>©2024 Juste Goungounga</copyright><lastBuildDate>Thu, 05 Dec 2019 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/img/portrait</url>
+      <url>https://jgoungounga.github.io/img/portrait</url>
       <title>R</title>
-      <link>/category/r/</link>
+      <link>https://jgoungounga.github.io/category/r/</link>
     </image>
     
     <item>
       <title>Leave one out</title>
-      <link>/talks/leave_one_out_test/</link>
+      <link>https://jgoungounga.github.io/talks/leave_one_out_test/</link>
       <pubDate>Thu, 05 Dec 2019 00:00:00 +0000</pubDate>
-      <guid>/talks/leave_one_out_test/</guid>
+      <guid>https://jgoungounga.github.io/talks/leave_one_out_test/</guid>
       <description>
 
 
@@ -56,9 +56,9 @@ On peut utiliser la technique du &lt;code&gt;leave-one-out&lt;/code&gt; qui cons
 )&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## Unit: milliseconds
 ##                                               expr      min       lq     mean
-##  lapply(1:100, FUN = function(i) leave_one_out(i)) 157.7347 159.3399 187.6039
-##    median       uq      max neval
-##  168.4752 225.6046 250.5041    10&lt;/code&gt;&lt;/pre&gt;
+##  lapply(1:100, FUN = function(i) leave_one_out(i)) 185.4462 193.1641 214.1645
+##   median       uq      max neval
+##  201.862 231.1189 278.0691    10&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Chaque appel de la fonction est indépendant.
 Proposons donc un test de la fonction par parrallèle.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;leave_one_out2 &amp;lt;- function(){
@@ -77,11 +77,11 @@ microbenchmark(lapply(1:100, FUN = function(i)leave_one_out(i)),leave_one_out2()
 &lt;pre&gt;&lt;code&gt;## Warning: executing %dopar% sequentially: no parallel backend registered&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## Unit: milliseconds
 ##                                               expr min  lq mean median  uq max
-##  lapply(1:100, FUN = function(i) leave_one_out(i)) 161 161  167    164 169 183
-##                                   leave_one_out2() 200 209  244    212 241 383
+##  lapply(1:100, FUN = function(i) leave_one_out(i)) 185 189  231    203 232 376
+##                                   leave_one_out2() 219 237  271    243 252 507
 ##  neval cld
-##     10  a 
-##     10   b&lt;/code&gt;&lt;/pre&gt;
+##     10   a
+##     10   a&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;stopCluster(cl2)&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 </description>

@@ -1,35 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Survival analysis | JUSTE GOUNGOUNGA</title>
-    <link>/tag/survival-analysis/</link>
-      <atom:link href="/tag/survival-analysis/index.xml" rel="self" type="application/rss+xml" />
-    <description>Survival analysis</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>©2020 [Juste Goungounga](https://justegoungounga.netlify.app)</copyright><lastBuildDate>Thu, 16 May 2019 11:00:00 +0000</lastBuildDate>
+    <title>Survival Analysis | JUSTE GOUNGOUNGA</title>
+    <link>https://jgoungounga.github.io/tag/survival-analysis/</link>
+      <atom:link href="https://jgoungounga.github.io/tag/survival-analysis/index.xml" rel="self" type="application/rss+xml" />
+    <description>Survival Analysis</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>©2024 Juste Goungounga</copyright><lastBuildDate>Sat, 25 Mar 2023 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/img/portrait</url>
-      <title>Survival analysis</title>
-      <link>/tag/survival-analysis/</link>
+      <url>https://jgoungounga.github.io/img/portrait</url>
+      <title>Survival Analysis</title>
+      <link>https://jgoungounga.github.io/tag/survival-analysis/</link>
     </image>
     
     <item>
-      <title>Prise en compte de l’hétérogénéité inter-centres et du biais de non-comparabilité avec un modèle à fragilité pour estimer la mortalité en excès dans les essais cliniques multicentrique</title>
-      <link>/talks/epiclin13-2019/</link>
-      <pubDate>Thu, 16 May 2019 11:00:00 +0000</pubDate>
-      <guid>/talks/epiclin13-2019/</guid>
-      <description>&lt;div class=&#34;alert alert-note&#34;&gt;
-  &lt;div&gt;
-    Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
-  &lt;/div&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Internal seminar of the SESSTIM research unit on &#39;Estimation de la survie nette dans les essais cliniques - Intérêts des méthodes utilisées dans les études populationnelles&#39;.</title>
-      <link>/talks/seminaireinternesesstim2018/</link>
-      <pubDate>Fri, 08 Jun 2018 11:00:00 +0000</pubDate>
-      <guid>/talks/seminaireinternesesstim2018/</guid>
+      <title>A new cure model that corrects for increased risk of non-cancer death: analysis of reliability and robustness, and application to real-life data</title>
+      <link>https://jgoungounga.github.io/publication/bmc2023/</link>
+      <pubDate>Sat, 25 Mar 2023 00:00:00 +0000</pubDate>
+      <guid>https://jgoungounga.github.io/publication/bmc2023/</guid>
       <description>&lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
     Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
@@ -40,9 +27,9 @@
     
     <item>
       <title>Webinar on &#39;Estimation de la survie nette dans les essais cliniques - Intérêts des méthodes utilisées dans les études populationnelles&#39;.</title>
-      <link>/talks/webinar17juin2016/</link>
+      <link>https://jgoungounga.github.io/talks/writing-technical-content/</link>
       <pubDate>Fri, 17 Jun 2016 11:00:00 +0000</pubDate>
-      <guid>/talks/webinar17juin2016/</guid>
+      <guid>https://jgoungounga.github.io/talks/writing-technical-content/</guid>
       <description>&lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
     Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
